@@ -13,7 +13,7 @@ Dim yearly_change As Double
 
 'create counter for number of stocks analyized, starting at 2 for placement on summary table
 Dim ticker_no As Integer
-ticker_no = 2
+
 
 
 'count number of worksheets
@@ -21,6 +21,8 @@ Dim worksheets As Integer
 Dim i As Integer
 worksheets = ActiveWorkbook.worksheets.Count
 For i = 1 To worksheets  'will uncomment once code for one sheet is complete
+
+ticker_no = 2 ' set ticker_no to 2 inside of worksheet loop
 
 'setup headers
 Range("K1").Value = "Ticker"
@@ -80,6 +82,8 @@ percent_change = (yearly_change / open_price)
 Cells(ticker_no, 13).Value = percent_change
 Else
 cells(ticker_no, 13).Value = 0
+end if 
+
 Cells(ticker_no, 13).NumberFormat = "0.000%" 'format to percentage
 
 
