@@ -166,11 +166,7 @@ End If
 Next i
 
 
-MsgBox ("macro is done")
-'need to figure out overflow error with running total of volume in the middle if statement (is currently commented out)
-'fixed volume issue in a hacky way -- need to find out if there is a better way to do this
-'need to ask about rubric -- the only prices that should be considered are the opening price on first day and closing price on last day.
-'rubric(cont) I dont think there is a reason to look at prices every day -- doing so would be unnecessary and would cause the script to take longer unnecessarly
-'do we need to actually insert additional columns? or can we have data be inserted into existing blank columns?
+MsgBox ("Calculations are complete!")
+
 'ask if we should always check if a variable is zero before trying to divide by a variable as a best practice 
 End Sub
